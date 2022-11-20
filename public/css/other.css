@@ -1,0 +1,335 @@
+*{
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.clear{
+  clear:both;
+}
+
+
+/* ---- No COPY ---- */
+body{
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer */
+  -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none; /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none;
+  user-select: none; /* Disable Android and iOS callouts*/
+  background-color: #ececec00;
+}
+
+
+#page_1 img{
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  user-zoom: none;
+}
+
+/* divide to 3 parts and set the color for each parts */
+#sky{
+    background: linear-gradient(to bottom, #b1f7ff, #b1f7ff, #ffff9b);
+}
+
+#road{
+    background: linear-gradient(to bottom, #ffff9b, hsl(91, 100%, 75%),  hsl(124, 33%, 67%));
+}
+
+#dirt{
+    background: linear-gradient(to bottom, hsl(90, 63%, 44%), hsl(90, 63%, 44%), hsl(32, 100%, 34%),  hsl(32, 100%, 34%), rgb(168, 66, 35))
+}
+
+/* ------------ PAGE 1 ------------ */
+    /* ---- LOADING PLAY BUTTON ---- */
+@keyframes loading {
+  0% { height: 10px }
+  10% { height: 11px }
+  15% { height: 12px }
+  20% { height: 13px }
+  25% { height: 14px }
+  30% { height: 15px }
+  35% { height: 16px }
+  40% { height: 17px }
+  45% { height: 18px }
+  50% { height: 19px }
+  55% { height: 20px }
+  60% { height: 21px }
+  65% { height: 22px }
+  70% { height: 23px }
+  75% { height: 24px }
+  80% { height: 25px }
+  85% { height: 26px }
+  90% { height: 27px }
+  95% { height: 28px }
+  100% { height: 29px }
+}
+
+@-webkit-keyframes loading {
+  0% { height: 10px }
+  10% { height: 11px }
+  15% { height: 12px }
+  20% { height: 13px }
+  25% { height: 14px }
+  30% { height: 15px }
+  35% { height: 16px }
+  40% { height: 17px }
+  45% { height: 18px }
+  50% { height: 19px }
+  55% { height: 20px }
+  60% { height: 21px }
+  65% { height: 22px }
+  70% { height: 23px }
+  75% { height: 24px }
+  80% { height: 25px }
+  85% { height: 26px }
+  90% { height: 27px }
+  95% { height: 28px }
+  100% { height: 29px }
+}
+
+@keyframes hideShowElement {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes hideShowElement {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.square {
+  width: 20px;
+  height: 10px;
+  margin: 10px;
+  position: relative;
+}
+
+.one {
+  background-color: #DE0E42;
+  animation:  loading 0.4s 12 alternate,
+              hideShowElement 1s 8s infinite linear;
+  animation-delay: 1ms;
+}
+
+.two {
+  background-color: #2196f3;
+  animation:  loading 0.4s 12 alternate,
+              hideShowElement 1s 8s infinite linear;
+  animation-delay: -0.5s;
+}
+
+.three {
+  background-color: #8bc34a;
+  animation:  loading 0.4s 12 alternate,
+              hideShowElement 1s 8s infinite linear;
+  animation-delay: -0.6s;
+}
+
+.four {
+  background-color: #ffc107;
+  animation:  loading 0.4s 12 alternate,
+              hideShowElement 1s 8s infinite linear;
+  animation-delay: -0.3s;
+}
+
+#loading_Page{
+  position: absolute;
+  top: 17vw;
+  width: 100%;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+      /* -- Play Button -- */
+@keyframes bd {
+  0%{background-position:0% 55%}
+  50%{background-position:100% 46%}
+  100%{background-position:0% 55%}
+}
+
+@-webkit-keyframes bd {
+  0%{background-position:0% 55%}
+  50%{background-position:100% 46%}
+  100%{background-position:0% 55%}
+}
+
+#playButton{
+  border-radius: 17px;
+  border: 1px solid #f7d61a;
+  box-shadow: 1px 3px #f7d61a;
+
+  position: absolute;
+  padding: 3px 58px 7px 58px;
+  top: calc(100vh/3 - 20px); 
+  left: calc(100vw/2 - 58px - 43px);
+
+  font-size: 32px;
+  font-weight: 700;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #ff8800;
+
+  background: linear-gradient(229deg, #f9ff00, #00e6ff, #56ff00);
+  background-size: 1200% 1200%;
+  
+  animation: bd 17s ease-out infinite;
+  opacity: 0.8;
+  z-index: 5;
+}
+
+#playButton:hover{
+  opacity: 1;
+}
+
+      /* -- Time notif -- */
+#timeNotif{
+  position: absolute;
+  top: calc(100vh/3 - 70px); 
+  left: calc(100vw/2 - 58px - 69px);
+  padding: 5px;
+
+  background-image: linear-gradient(to right,  rgba(141, 230, 236, 0.534), rgba(154, 255, 95, 0.534), white);
+  border-radius: 10px;
+  opacity: 0.5;
+}
+
+    /* -- LOADING EXIT BUTTON -- */
+.load-wrapp {
+  position: absolute;
+  margin: 0 10px 10px 0;
+  padding: 20px 20px 2px 6px;
+  border-radius: 5px;
+  text-align: center;
+  overflow-y: hidden;
+}
+
+.ring-1 {
+  width: 15px;
+  height: 15px;
+  padding: 20px;
+  border: 7px dashed  #4b9cdb;
+  border-radius: 100%;
+}
+
+.load-4 .ring-1 {
+  animation: loadingD 1.5s 0.3s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
+}
+
+.load-4{
+  overflow-y: hidden;
+}
+
+@keyframes loadingD {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loadingD {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+    /* -- Exit Button -- */
+
+#loading_Exit{
+  position: absolute;
+  bottom: 3px;
+  left: 6px;
+  width: 100%;
+}
+
+#exitButton{
+  border-radius: 7px;
+  border: 1px solid black;
+
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  padding: 7px 15px 6px 15px;
+  margin: 7px 15px 12px 9px;
+
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+
+  opacity: 0.8;
+  z-index: 1;
+  background-color: white;
+  color: black;
+}
+
+#exitButton:hover{
+  opacity: 1;
+}
+
+    /* -- Continue Button -- */
+@keyframes continueBtn {
+  0%{background-position:0% 55%}
+  50%{background-position:100% 46%}
+  100%{background-position:0% 55%}
+}
+
+@-webkit-keyframes continueBtn {
+  0%{background-position:0% 55%}
+  50%{background-position:100% 46%}
+  100%{background-position:0% 55%}
+}
+
+#continueButton{
+  border-radius: 17px;
+  border: 1px solid #f7d61a;
+  box-shadow: 1px 3px #f7d61a;
+
+  position: absolute;
+  padding: 3px 58px 7px 58px;
+  top: calc(100vh/3 + 70px); 
+  left: calc(100vw/2 - 58px - 46.5px);
+
+  font-size: 32px;
+  font-weight: 700;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #ff8800;
+
+  background: linear-gradient(229deg, #f9ff00, #00e6ff, #56ff00);
+  background-size: 1200% 1200%;
+
+  animation: continueBtn 17s ease-out infinite;
+  background-size: 1200% 1200%;
+  opacity: 0.8;
+  z-index: 5;
+}
+
+#continueButton:hover{
+  opacity: 1;
+}
+
+#continueButton:disabled{
+  background: linear-gradient(229deg, #ffed4d, #ff67e6);
+}
+
+

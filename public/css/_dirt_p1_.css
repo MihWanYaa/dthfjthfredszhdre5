@@ -1,0 +1,19 @@
+   /* ---- DIRT ---- */
+    /* -- Icon Setting */
+.icon_Language{
+  position: absolute;
+  font-size: 30px;
+  bottom: 8px;
+  right: 60px;
+  padding: 5px;
+  z-index: 4;
+}
+
+.icon_Language img{
+  opacity: 0.3;
+}
+
+.icon_Language img:hover{
+  width: 50px;
+  opacity: 1;
+}

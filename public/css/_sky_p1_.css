@@ -1,0 +1,121 @@
+    /* ---- SKY ---- */
+        /* -- Clouds -- */
+@keyframes move {
+  from { left: -45%}
+  to { left: 100%;}
+}
+
+@-webkit-keyframes move{
+  from { left: -35%}
+  to { left: 100%;}
+}
+
+#cloud_1{
+  position: absolute;
+  top: 10px;
+  opacity: 0.5;
+  animation: move both 51s 444ms infinite linear normal;
+}
+
+#cloud_2{
+  position: absolute;
+  top: 10px;
+  opacity: 0.8;
+  animation: move both 59s 29ms infinite linear normal;
+}
+
+#cloud_3{
+  position: absolute;
+  top: 10px;
+  opacity: 0.4;
+  animation: move both 43s 147ms infinite linear normal;
+}
+
+#cloud_4{
+  position: absolute;
+  top: 10px;
+  opacity: 1;
+  animation: move both 55s 201ms infinite linear normal;
+}
+
+#cloud_6{
+  position: absolute;
+  top: 10px;
+  opacity: 1;
+  animation: move both 50s 22ms infinite linear normal;
+}
+
+#cloud_7{
+  position: absolute;
+  top: 10px;
+  opacity: 0.7;
+  animation: move both 41s 15ms infinite linear normal;
+}
+
+        /* -- Sun -- */
+            /* Spin */
+@keyframes spinSun {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spinSun {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
+        /* Move */
+@keyframes moveSun {
+  from {
+    top: -200px;
+    right: -50px;
+  }
+  to {
+    top: -80px;
+    right: -60px;
+  }
+}
+
+@-webkit-keyframes moveSun {
+  from {
+    top: -200px;
+    right: -50px;
+  }
+  to {
+    top: -80px;
+    right: -60px;
+  }
+}
+    /* Appear */
+@keyframes appearSun{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes appearSun{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#sun_1{
+  position: absolute;
+  float: left;
+  animation:  spinSun 18s infinite linear forwards, 
+              moveSun 6s linear forwards,
+              appearSun 6s linear forwards;
+}
